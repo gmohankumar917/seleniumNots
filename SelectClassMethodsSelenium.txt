@@ -1,0 +1,151 @@
+Select:class  (drop down)  single and multiple    
+--------------
+
+Select objref=new Select(WebElement refname);
+
+1.selectByValue()-m           
+2.selectByVisibleText()-m   
+3.selectByIndex()-m
+
+4.isMultiple()-m----------if multiselect---------true
+else false
+
+5.getOptions()-m---List<WebElement> 
+6.getAllSelectedOptions()-m  
+7.getFirstSelectedOption()-m
+
+8.deSelectByIndex()-m
+9.deSelectByValue()-m
+10.deSelectByVisibleText()-m
+
+11.deSelectAll()-m---
+
+
+
+
+
+
+
+
+
+
+
+
+
+http://output.jsbin.com/osebed/2
+
+Dropdown without Select tag(Options keeps on changing its position but we need to select specific options)
+=========================================================================
+Dynamic dropdown----------------Tamil,English,Hindi
+
+<input type="option">Tamil</input>
+<input type="option">English</input>
+<input type="option">Telugu</input>
+<input type="option">Malayalam</input>
+<input type="option">Hindi</input>
+
+List<WebElement> options=driver.findElements(By.xpath("//input[@type='option']"));
+for(WebElement option: options ){
+
+String txtOption=option.getText();
+
+if(txtOption.equals("Tamil")||txtOption.equals("English")||txtOption.equals("Hindi")){
+option.click();
+}
+}
+
+
+//To print 1st,3rd,5th ....options from dropdown
+for(int i=0;i<li.size();i+=2)
+{
+System.out.println(li.get(i).getText());
+
+}
+
+
+
+
+
+
+
+
+
+List<WebElement> li=driver.findElements(By.xpath("//input[@type='option']"));
+for(WebElement ele: li){
+
+String text=ele.getText();
+if(text.equals("Tamil") || text.equals("Telugu"))
+
+ele.click();
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WebTable(Without tr td tags-----------WebTable with common atributes)
+=================================================
+<div class=row>
+<div class=cell>Name</div>
+<div class=cell>Email id</div>
+<div class=cell>Mob</div>
+</div>
+
+<div class=row>
+<div class=cell>Sara</div>
+<div class=cell>Sara@gmail.com</div>
+<div class=cell>9876543210</div>
+</div>
+
+<div class=row>
+<div class=cell>Amy</div>
+<div class=cell>Amy@yahoo.com</div>
+<div class=cell>9846342123</div>
+</div>
+
+List<WebElement> rows=driver.findElements(By.xpath("//div[@class='row']"));
+for(WebElement row: rows){
+
+List<WebElement> cells=row.findElements(By.xpath("//div[@class='cell']"));
+for(WebElement cell : cells){
+
+String data=cell.getText();
+System.out.println(data);
+}
+
+}
+
+Output:
+======
+Name
+Emailid
+Mob
+Sara
+Sara@gmail.com
+9876543210
+Amy
+Amy@gmail.com
+9846342123
+
+
+
+

@@ -1,0 +1,13 @@
+Debug(Step by step execution):
+-----------------------------------
+Step 1: set the breakpoint or togglepoint(double click the line number)
+
+
+Step 2: Right click the program-------> Debug As-------->Java application--------->Switch Debug Perspecttive---Yes
+
+
+F6-step over----------------for moving line by line
+F8---close the debug
+
+
+my selenium script will be running very fast but my browser did not take much as faster then script

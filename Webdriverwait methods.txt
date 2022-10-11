@@ -1,0 +1,84 @@
+WebDriverWaits:
+------------------
+alertIsPresent()
+elementSelectionStateToBe()
+elementToBeClickable()
+elementToBeSelected()
+frameToBeAvaliableAndSwitchToIt()
+invisibilityOfTheElementLocated()
+invisibilityOfElementWithText()
+presenceOfAllElementsLocatedBy()
+presenceOfElementLocated()
+textToBePresentInElement()
+textToBePresentInElementLocated()
+textToBePresentInElementValue()
+titleIs()
+titleContains()
+visibilityOf()
+visibilityOfAllElements()
+visibilityOfAllElementsLocatedBy()
+visibilityOfElementLocated()
+
+
+Selenium Waits:                      
+================
+
+1) Unconditional Wait:
+Thread.sleep(ms);   thread.sleep 8000
+
+ms --- milli second ---- 1000 ms = 1 sec
+Thread --- Class
+sleep() ---- Static method
+
+2) Conditional wait:
+--------------------    
+a) (Implicit Wait)
+It is used for all the WebElements.  
+Polling time is 250 ms.
+                                                           
+
+
+
+b) (Explicit Wait)
+------
+note:
+This wait is for a particular WebElement.
+
+i) WebDriver Wait;  -- C
+==============
+1) Polling time is 500 ms
+2) Time is declared in Seconds.
+3) It will not handle TimeOutException
+
+Methods of WebDriver Wait ---------> Fluent Wait
+
+
+
+ii) Fluent Wait;  - C
+=============
+1) We can set polling time
+2) Time is declared in ms,ns,s etc
+3) It will handle timeOut Exception
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

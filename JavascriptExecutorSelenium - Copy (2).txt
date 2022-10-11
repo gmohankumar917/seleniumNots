@@ -1,0 +1,64 @@
+JavaScriptExecutor:I
+----------------------------
+JavascriptExecutor is used to execute javascript in selenium webdriver.
+javascript--- good and fast at interacting with webElements.
+Even it is good at interacting with hidden webElements
+
+Note:
+------
+when your normal sendkeys(),click() not working we will use JavascriptExecutor method.
+
+JavaScriptExecutor js=(JavaScriptExecutor)driver;
+js.executeScript("javascript code",WebElementRef);
+
+
+insert values to any field:(replacement for sendkeys())
+------------------------------------------------------------------------
+arguments[0].setAttribute('value','user text')
+
+to retrieve the text entered in a field(replacement for getAttribute("value"):
+----------------------------------------------------------------------------------------------
+return arguments[0].getAttribute('value')
+
+
+To click a webElement(replacement for click())
+---------------------------------------------------------
+arguments[0].click()
+
+
+
+
+Typecasting:
+=========
+Converting one Data Type into another Data Type
+NewDataType   newVariable=(NewDataType)oldvariable;
+
+int a=10;                 int a =10;              int a = 20;
+long l=(long)a;     float f = (float)a;     long lo = (long)a;
+
+1.Upcasting:
+==========
+Converting a smaller Data Type into a larger Data Type
+int(4 bytes)------long(8 bytes)
+
+Eg:
+===
+converting the childtype into parentType
+List li=new ArrayList();
+WebDriver driver=new ChromeDriver();
+
+2.Downcasting:
+===========
+Converting a larger Data Type into a smaller Data Type
+long(8 bytes)-----------------int(4 bytes)
+
+converting the Parenttype into ChildType
+//Downcasting
+NewDataType   newVariable=(NewDataType)oldvariable;
+JavaScriptExecutor js=(JavaScriptExecutor)driver;
+
+
+JavaScriptExecutor js=(JavaScriptExecutor)webDriver;
+js.executeScript("arguments[0].click()",WebElement);
+
+

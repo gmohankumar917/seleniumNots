@@ -1,0 +1,328 @@
+Windows Handling:
+-----------------------
+When you have multiple windows, to switch control between your windows we go  
+for windows handling concept.                                                                                                                           
+
+driver.switchTo().window(String url)----------------url may be changing sometimes
+driver.switchTo().window(String title)-----------Duplicates
+driver.switchTo().window(String windowsId)                                                            
+
+To get the WindowsId:
+----------------------------
+Methods available in WebDriver Interface.
+
+
+parent Window id:
+-------------------------
+getWindowhandle()-m----it will return only parent window Id
+Return type: String
+
+all windows id:(parid+all child windows id)
+-----------------
+getWindowHandles()-m---parent id+all child windows id
+Return type: Set<String>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Amirtha---8610332272
+
+This week sat sun------Encapsulation(Userdefined list,set,map),Singleton class,File operations
+
+
+
+Scenario:(Using List)
+==================
+When i click a button in parent window,3 windows opening parallely at a time.We need to switch into 3rd child window
+
+String parId="abc";
+
+Set<String> allWindows=[abc,xyz,ijk,lmn];
+
+
+List<String> li=new ArrayList<>();
+
+li.addAll(allWindows);
+
+	          0     1    2      3
+List<String> li=[abc,xyz,ijk,lmn];
+
+driver.switchTo().window(li.get(3));
+
+
+To switch from any child window to parent window:
+============================================
+driver.switchTo().defaultContent();
+
+
+Without using List:
+===================
+
+String parId="abc";                                         
+Set<String> allWindows=[abc,xyz,ijk,lmn];
+
+
+int count=0;
+for(String x: allWindows){
+
+if(count==3){
+
+driver.switchTo().window(x);
+}
+count++;
+}
+
+ count=0;     x=abc
+ count=1;     x=xyz
+ count=2;    x=ijk
+count=3;	  x=lmn
+
+
+
+
+
+
+
+
+
+pls wait
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+parid=abc
+allwindows=[abc,xyz]
+
+
+
+
+Search iphone------------Print all the iphone names
+Sort all the iphones-------------------Based on alphabetical order
+Sort all the iphones-------------------Based on price of iphones(Ascending or descending)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+When i click a particular button in parent window----------------3 child windows getting opened parallely at a time
+
+Whichever window has "My account" text in the title -----in that window find the Webelement for username,password and login button
+
+
+String parId = driver.getWindowHandle();
+Set<String> allId = driver.getWindowHandles();
+
+
+		for(String x :  allId){
+			driver.switchTo().window(x);
+			String title=driver.getTitle();
+			if(title.contains("My account")){
+				
+				driver.findElement(By.id("username")).sendKeys("java");
+				driver.findElement(By.id("password")).sendKeys("selenium");
+				driver.findElement(By.id("login")).click();
+			}
+		}
+		
+
+After switching into any child window-----if u want to get back to your parent window:
+======================================================================
+driver.switchTo().defaultContent();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+findElement:
+===========				
+--->Return type----WebElement
+--->If the locator doesnt match any WebElement or if it is matching with more than one WebElement
+it will throw NoSuchElementException.
+
+
+findElements:
+============
+--->Return type---List<WebElement>
+---->If the locator doesnt match any WebElement--------it will return Empty List-----If u try to access index 
+positions of empty list-----IndexOutOfBoundsException
+
+
+
+
+
+
+----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Program code:
+-----------------
+WebElement txtSearch = driver.findElement(By.id("inputValEnter"));
+		txtSearch.sendKeys("sanitizer");
+		WebElement btnSearch = driver.findElement(By.xpath("//span[text()='Search']"));
+		btnSearch.click();
+		WebElement product = driver.findElement(
+				By.xpath("//img[@title='Saferub 80% Alcohol Based Bottle Hand Sanitizer 200 mL Pack of 2']"));
+		product.click();
+
+		// Method1
+		String parId = driver.getWindowHandle();
+		System.out.println(parId);
+
+		Set<String> allId = driver.getWindowHandles();
+		System.out.println(allId);
+
+		for (String x : allId) {
+			if (!(parId.equals(x))) {
+				driver.switchTo().window(x);
+			}
+		}
+
+		WebElement btnCart = driver.findElement(By.xpath("(//span[text()='ADD TO CART'])[1]"));
+		btnCart.click();
+		driver.switchTo().defaultContent();
+
+
+
+
+code2:
+--------
+String parId=driver.getWindowHandle();
+
+Set<String> allId=driver.getWindowHandles();
+count=0;
+
+for(String   x: allId)
+{
+if(count==5)
+{
+driver.switchTo().window(x);
+}
+count++;
+}
+
+driver.switchTo().window(parId);
+
+0  1   2   3   4   5
+
+
+code 3:
+--------
+
+       0       1          2       3          4         5
+li[parId,child1,child2,child3,child4,child5]
+
+ArrayList<String> li=new ArrayList<String>();
+li.addAll(allId);
+
+driver.switchTo().window(li.get(5));
+driver.switchTo().window(li.get(0));
+
+

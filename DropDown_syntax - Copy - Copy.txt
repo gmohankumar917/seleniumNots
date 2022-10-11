@@ -1,0 +1,33 @@
+Drop Down html code:
+-----------------------
+<select>
+<option>India</option>-----------0
+<option value="US">United States</option>-----1
+</select>
+
+Select:
+----------
+selectByIndex(10);
+selectByValue("IND")
+selectByVisibleText("India")
+
+Select ref=new Select(WbElement refNAme);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

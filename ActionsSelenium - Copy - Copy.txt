@@ -1,0 +1,56 @@
+Actions:----------- class
+Actions class is used to perform mouse operations.
+
+Object creation:
+===========
+WebDriver driver= new ChromeDriver();
+Actions ref=new Actions(driver);
+
+To do mousehover action:-
+------------------------------
+moveToElement()--m
+
+syntax:
+-----------
+Actions obj=new Actions(webDriver ref);
+obj.moveToElement(webele ref).perform();
+
+To do drag and Drop:
+-------------------------
+dragAndDrop()--m
+
+syntax:
+--------
+Actions obj=new Actions(webDriver ref);
+obj.dragAndDrop(Source,Destination).perform();
+
+Websites:
+========
+http://www.greenstechnologys.com/
+http://demo.guru99.com/test/drag_drop.html
+
+Actions class methods
+
+doubleClick()
+contextClick()-------------right click
+keyUp()=== key release       
+keyDown()===key press
+
+keydown shift====sendkeys (greens) keyup (shift)
+
+Modifier keys-------------------alt,shift,ctrl,fn
+
+
+
+
+Robot class:--------------is in java.awt package                              awt(abstract window toolkit)
+========
+To acheive keyboard actions
+
+Robot r=new Robot();------------------------throws AWT Exception
+
+
+Methods:
+-----------       vk= virtual key  keypress(keyevent.vk_)
+keypress()
+keyRelease()

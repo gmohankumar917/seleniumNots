@@ -1,0 +1,1864 @@
+    
+                                                          JAVA   INTRODUCTION 
+		                                  ===================
+   
+C / C++	1950's				
+-----------				
+* Platform dependent( window ------- window , linux ------ linux , mac ------- mac ) 
+* Runs single  application at  a time.  
+*header files   #include<studio.h>
+* shows error after completing the whole program.  
+
+JAVA (1995)  
+---------------
+* Platform independent ----write once and run anywhere (wind------wind,linux,mac). client - mac - window
+* Runs multiple  application at  a time  
+*simple programming language
+*no need header files    
+  -OOPs based -- Object Oriented Programming Structure(class,methods ,objects) it is a collection of class, method, object.
+*easy to run and debug.
+
+ 
+
+Features of java :-
+============ 
+1.Open source & freeware.  
+2.Platform independent  
+3.Multithreading  ----> parallel execution ---> saves time-- runs multiple application at a time.
+4.portable---Write once run anywhere  
+5.More secured ( FireWall )
+ 
+JDK   --( Java Development Kit) )-- 
+-----------------------------------------  
+	Whenever  if we  want to run  or  develop  a  program  in  java  , jdk is essential.
+
+
+JRE   -- Java Runtime Environment---   (Short cut)      main
+------------------------------------------------------------              
+➢ Java Runtime Environment
+➢ It is a pre-defined. class files (i.e.) library files , jar files  will be present
+
+		
+JVM  - Java Virtual Machine	 			
+-------------------------------------                   
+➢ Java Virtual Machine
+➢ It is mainly used to allocate the memory and byte code conversion. 
+
+ 	
+
+JDK---------JRE+JVM  
+	 
+TOOLS...            
+========
+Notepad++  			 							
+Eclipse  ------------  userfriendly write , save , run ---------  (95%)	open source and freeware
+Netbeans	-- similar for eclipse but its a paid version
+	
+Jdeveloper - Oracle			
+RAD - IBM
+			
+
+
+JDK 1.8  ,	Eclipse  New version
+
+
+
+
+How to download the JDK
+------------------------------------  
+
+Step 1 : Google Search --->  JDK 1.8 download
+
+Step 2 : Click the 1st link ---> Java Downloads | Oracle
+
+Step 3 : Scroll Down ----->   Select Java 8
+
+Step 4 : Download the JDK and Select the windows platform and Select the system version which was have 32/64
+
+Step 5 : If you dont have account means Create New Account
+
+Step 6 : Verify the email 
+
+Step 7 : login and install JDK
+
+Step 8 : Verify the JDK in CMD promt   type    (java -version)
+
+---------------------------------------------------------------
+
+How to download the Eclipse
+-------------------------------------
+
+Step 1 : Google Search ---> eclipse New version download
+
+
+Step 2 : Click ---> Windows 32-bit x86_64
+
+Step 3 : Click download button (Orange color)
+
+ 
+
+How to find the JDK in my system?
+----------------------------------------------
+
+Step 1 : Command Prompt
+
+Step 2: java -version
+
+
+
+ java flow===(project)==package==class===method===mainmethod==object)    
+
+
+OOPS :-
+--------    
+OOPS (Object Oriented Programming Structure) 
+
+
+
+It is method of implementation in which program is organised as collection of class ,methods and object
+
+Project --> Collection of packages 
+
+Package  --> Collection of classes   		
+								
+* Class    --->  Collection  of  Methods,Variables & Objects		     
+							
+* Method --->  set of actions/logic will  be performed  --or - business logic/implementation  details ( actions)
+								
+* Object  --->  it is used to call a method , run time memory allocation.
+
+
+OOPS Principles :-
+-----------------------
+1. Class                    
+2. Method          
+3. Object 
+4. Inheritance          
+5. Polymorphism     
+6. Abstraction                 
+7. Encapsulation
+
+
+STANDARD NOTATION  / CODING STANDARD      
+--------------------------------------------------------------	        
+                                       
+1. Pascal Notation      Eg: CodFisTechnologies    VigneshKumar
+-------------------------
+	Each and Every word  of  1st   letter  should be  capital .  
+                                                                                                              project - package - class - method - main method - object
+	Followed  in  creating  "project name"  and  "class name"
+
+
+2. Camel Notation	
+-------------------------      Eg: codFisTech                   
+	1st word  -->small letter    bharathiRajChennaiTamilnadu
+	after that each and every word of first letter should be capital   
+	
+	Followed  in  method name  , variable , object name
+
+	eg:   employeeDetails
+	      atmPinNumber                   java flow- p
+
+How to create a project :-
+-----------------------------
+
+click file ---> goto new --> click java project  
+
+
+
+How to create a package :-
+-------------------------------------  source code
+
+right click the Src folder ---> go to new --> click package
+
+package name ---> fully small letters 
+
+com====company  com.small
+
+
+
+
+How to create the class :-
+-------------------------------------
+
+right click the package ----> go to new ---> click class
+
+
+
+how to Create  Method						
+--------------------------------			
+    	methodName(ctrl + space)	
+
+       System.out.println()  ---->  sysout(ctrl+space)     
+
+            
+    
+To  Start  Execution
+----------------------------
+main method ---->    main(ctrl+space)	     
+
+		
+
+Object Creation - Syntax
+-------------------------------
+  ClassName   objectRefName = new ClassName(); 
+
+
+how to call a method
+-----------------------------
+objectRefName.methodName; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Same Package & Different Package :-
+----------------------------------------------
+
+1. Same package :-   org.sample 
+-------------------------
+To Accessing with different class on same package :-
+--------------------------------------------------
+   
+private--------------class level access specifier     
+public---------------global level access specifier     
+
+
+2. Different Package:-
+----------------------------
+
+To Accessing with different class on different package :-
+---------------------------------------------------------------------  org.sample    org.data
+	For accessing the methods of a class which is present in a different package,we have to 
+import that class
+
+syntax-     import  packagename.classname;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Datatype---> to inform the input format and to store the datas
+--------------
+1.Primitive                              
+2.Non Primitive
+ 
+(primitive)---basic       
+-------------------                   ( 1byte=8bit ) 
+
+datatype  Size(byte)         (bit)	             WrapperClass                   Defaultvalue
+===========================================================================================
+1)byte		    1  		       8		         Byte		                   0------                    - ( 2digit  )
+2)short	    2		       16		        Short		                   0-----                     ( 4digit )
+3)int		    4		       32		        Integer		                   0-------                    ( 9digit )
+4)long		    8		       64		        Long		                    0------                     ( 19digit )
+
+5)float	   4		       32		        Float		                   0.0
+6)double          8		       64		         Double		                   0.0
+
+7)char  'a'       2  		       16		         Character	                     -
+
+8)boolean       1	                  8		              Boolean	  	          false	
+
+
+
+	 				       
+ 			
+		
+
+String(non primitive datatype)
+------------------------------			  					
+*pre defined class (java.lang)		
+*collection of character  which is enclosed within " "  --->	"javaBatch@123"
+(default value of string = null)    
+
+Wrapperclass ----------- classes of primitive datatype    
+
+variable -- name of a memory location where datas get stored	
+	   --    it is used to store the values/datas                     
+														  
+declaration			 int age;			
+-------------.							
+datatype variableName;	 eg- byteAge;	 int a;
+                               float Salary;    int age	;   
+             						
+initialization					a=10			 
+---------------  					
+variableName=value;	eg: age=22; 	a=10;  a =10;
+							      age=20;
+                                                          short a=10;
+declaration &initialization
+
+----------------------------			int age=20;
+			  
+datatype variableName=value;	eg-  int age =25;     int age=30;
+                                                                byte a =30;
+
+
+Range Calculating formula
+---------------------------
+ -2^[n-1]   to  (2^[n-1] - 1)   n---bit       
+
+
+
+
+byte   ---->  n=8   ( n = bit )
+------
+                 
+	-2^7   to (2^7) -1
+
+	-128  to  127     -----------------------------2d
+								
+short --->	n=16					
+-------	
+	-2^15   to (2^15) -1       
+
+	-32768    to 32767	  -----------4d
+
+
+
+
+
+
+
+
+			
+
+Scanner --  (C)  ---- java.util
+-------------------
+java.lang is the default package of  java
+It is a pre-defined class present in java.util package.
+It is mainly used to get the input from the user at run time
+
+Syntax-   Scanner ref=new Scanner(System.in);   //inputstream	  
+
+to call-->  ref.scannerMethods(); 
+
+Scanner methods :-				
+--------------------------
+nextByte() -m     						
+nextShort() -m
+nextInt() -m				
+nextLong() -m						
+nextFloat() -m				
+nextDouble() -m
+nextBoolean() -m
+next.char()  
+String
+====
+next() --------------it ignores the  space
+nextLine() ----------it accept the space
+
+When you gave invalid input to the scanner methods it will throw InputMismatch Exception 
+
+
+
+
+
+
+
+
+
+
+
+Inheritance---                         
+---------------    
+we can access one class property  from another class property  by using extends keyword./without creating multiple object.
+
+Advantages
+------------
+1.object creation gets reduced
+2.Memory wastage is reduced
+3.Reusable code purpose
+                                        
+                                        
+types of Inheritance
+-----------------------							
+1. Single Inheritance(parent---child)				
+2. Multiple Inheritance
+3. Multilevel Inheritance				
+4. Hierarchical Inheritance				
+5. Hybrid Inheritance					
+
+1. Single Inheritance   one parent - one child
+----------------------------  
+One parent supports a single child  (or) one child is accessing one parent
+
+
+                                 
+2. Multiple Inheritance :-  father   - mother   - child
+-----------------------------
+More than one parent going to supports a single child parallely at a time  
+
+
+
+we cant achieve multiple inheritance in java because  after extends keyword we can specify only one class name , if  we try to specify means we will get 
+
+1.Syntax error
+2.Priority issue or deadly diamond problem
+
+We can achieve multiple inheritance by using interface.
+
+
+
+
+
+
+
+
+
+3. Multi-level Inheritance--(level by level inheritance)   GP-extends -  Parent  - extends - child
+-----------------------------
+More than one parent going to supports a single child in a chain like structure .
+
+
+
+
+
+
+4.Hierarchical Inheritance			
+-----------------------------------
+One parent is going to support more than one child	
+
+	Parent -- child 1 - /child 2  /- child 3
+
+
+							
+5.Hybrid Inheritance
+---------------------------                  
+Combination of any two inheritance      
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Polymorphism
+-------------------
+Task implemented in many ways / Executing methods in more than one form   
+
+poly-many								
+morphism-forms			
+											
+Types
+----------						
+1.Method Overloading		
+2.Method Overriding				-
+
+1. Method Overloading   - Compile time polymorphism /Static binding/Early Binding  			
+------------------------------------------------------------------------------------------------------------                               
+Decision of which method to be called
+
+If we  have mutliple methods with same method name the method name should differs only on arguments datatype, arguments counts , or Argument datatypes order.
+
+methodName()--parameter   									
+	 											
+(int age, float salary)		datatype variable name =  one argument					
+ |					                                                  
+ ------> argument   ---> datatype variable  ---->Eg : int age 
+							  	
+same class                  
+same method name           
+diff arguments  
+
+
+methods differs on arguments datatype  ( datatype variablename)
+methods differ on arguments count (datatype varaible name , datatype variable name) 
+methods differ on arguments datatype order .
+
+
+
+
+
+
+2. Method Over riding/run time polymorphism/dynamic binding/Lateral Binding
+--------------------------------------------------------------------------------------------------                   parent class                      child class
+Decision of which instance(object) to be called                                                               sysout("10000")                sysout("12000")
+
+when ever we are not satisfied with business logic of our parent class we can create a child class and we can overide all parent methods  in child class
+
+diff class(parent and child class)   
+differnt method
+same argument.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+method overloading 
+-------------------------
+1) Same class
+2) Same method
+3)Different arguments
+
+method overriding
+---------------------
+1) Different class
+2) Different methods
+3) Same Arguments
+
+Employee
+private void empName(){
+
+}
+main
+Employee e = new Employee();
+e.empName();
+
+
+
+
+
+ABSTRACTION :-OOPS CONCEPT              
+-------------------------- ------                           
+                                                                                                                                    
+Hiding the implementation details  or buisness logics          	   																							
+Types									
+====									
+1.Partial Abstraction								
+2.Fully Abstraction							
+							
+										
+1.Partial Abstraction ---> abstract class        public abstract class Employee
+============================                   
+abstract---- access modifier
+
+-Contains both abstract and non abstract methods
+
+Abstract  methods----> We cannot write the business logic
+	 ---->eg:    public abstract void details(); 	 
+    
+Non Abstract methods-->we can write the business logic 
+	----> eg:	  public void emp(){
+		                 .............
+		  }
+
+-we cannot create objects
+-to access methods in another class we have to use extends keyword
+
+
+
+
+
+
+
+
+
+2.Fully Abstraction   ---->    interface 		eg -->  public interface Data{    
+-------------------------                                                                   }
+*Contains only abstract  methods.
+*We cannot create objects.
+*To access the methods in another class we have to use implements keyword.
+
+default access modifier in interface in method level --public abstract
+default access modifier in interface in variable level - static final 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Control Statements-----
+----------------------------
+1. Conditional statement ( if, if else ,nested if ,ladderif)
+2. looping statement or iteration statement(for/nestedfor/while/dowhile)
+3. jump statement(break,continue,System.exit,return)
+
+
+< lesser than                                                        
+> greater than                                    
+<= lessthan or equal to                             
+>= greater than or equal to                
+= = equals to (compare)                                                                
+!= Not equals to       70 != 90                                   
+
+
+1.Conditional Statements ----------Based on a particular condition , a set of instruction is going to done.
+				
+
+1. if  - 
+2. if else
+3. nested if
+4. ladder if
+
+1.if --> Syntax - block   if =the condition must be true
+--------------------
+if(condition){
+	       sysout
+		 		cond true ---> logic1			
+logic1 		  		cond false --> - 
+
+}
+
+
+
+
+
+
+
+2.if else ---> Syntax
+-------------
+if(condition){   if == condition true     suppose if block condition false means else block will execute
+ 
+logic 1
+				cond -true ---> if --logic 1	  false --> else --logic 2
+}			
+else{
+
+logic2
+
+}
+
+
+
+
+AND&& == BOTH CONDITION SHOULD BE TRUE ( theen only if block will be execute)
+
+
+
+
+
+
+
+
+To check more than one condition  -------->  by using operator
+------------------------------------------------------------------------------
+
+1. AND (&& )  ---- 
+2. OR ( | | )  
+
+
+1. AND Operator --  Both condition True means it will enter into the if block otherwise it will enter into else block
+-----------------------
+cond1    cond2	
+A         H
+T	T	T    if    
+
+T	F	F   else 
+
+F	T	F   else 
+
+F	F	F   else 
+
+
+T  T  F  T  T  F-------->  False
+
+Logical AND -->  &&  Ambrazen == faster    1st false == i wont check 2nd condition == it directly execute the else block
+--------------
+Checks the 1st condition , if it is false---it directly executes the else block.(does not check 2nd cond)
+
+Bitwise AND    &  == slower 
+------------------
+Checks both condition and execute corrosponding block.
+
+
+
+
+
+
+OR Operator  --->  Any one condition True means it will enter into the if block . 
+-------------------
+
+cond1  cond2	result
+T	T	T    if
+
+T	F	T    if
+
+F	T	T   if
+
+F	F	F   else
+oops == c0
+
+  
+
+Logical OR   | |    
+----------------------     t
+Checks the 1st condition , if it is true  -- it directly executes the if block.(does not check 2nd cond)
+
+Bitwise OR   |
+----------------------
+Checks both condition and execute corrosponding block
+
+
+
+
+Nested if
+------------
+
+if(cond){
+
+      if(cond){
+	logic
+     }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+ladder if			    	  		
+--------------	
+	true	
+if(cond )  {  
+
+logic1
+				
+} 
+elseif(cond){
+
+logic2 
+
+}
+
+
+
+else{
+
+  logic n   
+}
+
+Switch case
+=============
+
+switch()
+{
+case:    
+
+break;
+
+case:
+
+	
+break;
+
+
+default:
+	break;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2.Looping---------   for repeating actions
+============================						
+1. for 							
+2. while									
+3. do while 			
+								
+   Repeatedly executing the same set of statements again and again untill the condition becomes false				 	
+			
+byte age;
+age=22;
+
+for
+---------	           //1		    2          	4    i++ or i-- (i = i+1) or (i= i-1)	
+syntax :     for( initialization; condition ; inc/dec){
+		
+                          //3                      
+		business logic;
+
+	}
+
+
+increment --->  i++   or  i=i+1
+decrement --->  i--     or  i=i-1
+
+
+
+
+
+
+Nested For Loop :- --> Syntax
+------------------------------
+
+ for( initialization; condition ; inc/dec){
+
+
+                        
+	 for( initialization; condition ; inc/dec){
+		
+                                
+		logic;
+
+	}
+		
+         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0----i
+0
+1
+2
+1-----i
+0
+1
+2
+2------i
+0
+1
+2
+
+
+
+
+
+
+
+
+while loop /entry check loop
+====================
+
+//1
+initialization;
+
+//2
+while(condition){
+
+//3
+logic;
+
+//4
+inc/dec;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3.do while -- exit check loop									
+---------------				
+
+//1
+initialization;			
+				
+do{					
+//2				
+logic;
+					
+//3
+inc/dec;						
+
+    //4					
+}while(cond);
+
+
+
+
+If condition fails in the do while atleast a single time it will execute
+
+
+
+
+
+3.Jump statements:-
+-------------------------
+1.break--used to terminate the loop  in middle  
+2.continue - used to skip particular iteration
+3.System.exit (0)----used to terminate the whole program
+
+
+// Access specifier  - 4 types  - private - class level access specifier   public - global level access specifier   protected --    default - access
+
+
+
+same package and diffrent package
+fully abstraction
+
+oops - dadatypes - control statement - access specifier
+
+
+
+we can access one class property from another class by using
+
+1.Object creation
+2.extends(Keyword)
+
+			
+Access Specifier			
+=============
+Access Specifier is used to give the access level
+
+1.public     ---------	    same pack(obj , extends)
+	                            diff pack(obj , extends)-----       global level access
+
+2.private    --------	   class level access
+
+3.protected  --------	   same pack(obj , extends)
+		               diff pack(extends)
+
+4.default   -----------	same pack(obj , extends)----package level access
+
+	  
+AccessModifier
+============
+1.Abstract
+2.static
+3.final
+             
+Abstract   
+----------
+1. class	-  cannot create object  -------Abstract class (partial abstraction)
+2. method	- cannot write a business logic
+3. variable - not able to declare
+
+Static			
+--------
+1. class	-not able to declare
+2. method- same class--->no need of obj creation,just  methodname  is enough to call.
+	  diff class---> with extends --->methodname is enough
+	  diff class---> without extends --->classname.methodname;
+
+3. variable - same class--->just variable name is enough  
+	 diff class---> with extends --->variablename is enough
+	 diff class---> without extends --->classname.variablename;
+
+final
+====
+1. class	  -not able to inherit
+2. method  -not able to over ride
+3. variable  - not able to change the value
+
+                                                                
+STRING :-     012345                                                                                 
+--------------   codfis -  6
+                                                                  
+*String is a predefined class presented in java.lang package. 
+*String is defined as collection of character enclosed within the " ".                 012345
+*Default value of String is null.                                1234                                   GREENS     N-1 ( index) N= length = 6-1=5
+*String is an index based one --- (position).              JAVA                                 123456
+*Index starts with 0 and ends with n-1.                     0123
+*length of the string is starts with 1 and ends with n.
+
+
+eg : "java 1@" --------------- LENGTH=7  -------- Index--> 0 to 6     12345678901234567
+	                                                                  Greens Technology     
+String s = " java 1@ ";                                               01234567890123456 
+                                                                        
+
+
+j    a     v   a   space   1   @                                        
+0    1     2   3    4         5   6------->Index
+1    2      3   4    5        6   7 ------->Length						
+ 
+Last Index -----n-1 = 7-1 =6
+
+
+object creation
+==========
+classname objectref name = new classname();
+
+dataypes
+=====
+datatype variablename = value();
+
+string 
+====
+String objectrefname =" "
+
+
+
+
+
+
+syntax:
+======
+String refName=" ";
+
+
+
+Methods:
+========
+1.charAt(index)-->It is used to find the particular value by using index
+
+2.toUpperCase()-->To convert String to its Upper Case or capital letter
+
+3.toLowerCase()-->To convert String to its Lower Case or small letters
+
+4.isEmpty()-->To check whether the string is empty or not.
+
+5.startsWith(value)-->To check whether the string starts with the particular value or not
+
+6.endsWith(value)-->To check whether the string ends with the particular value or not
+
+7.contains(value)-->To check whether the string contains the particular value or not
+
+8.length()-->To find the length of the given string
+
+9.replace(old,new)-->to replace one char or word into another char or word
+
+10.indexOf(value)-->It is used to find the index of the particular value(first occurance)
+
+11.lastIndexOf(value)-->To find the last index of the particular value(last occurance)
+
+12.trim()-->to remove spaces present before and after the String.
+
+13.subString(start Index)-->To print the value start with particular index value.
+
+14.subString(start Index,end Index)-->To start with and ends with the particular index value.
+
+15.split(arg)-->To split the string based on the argument.
+
+16.equals()-->To compare 2 strings and it is case sensitive.Return Type:Boolean
+
+17.equalsIgnoreCase() --> To compare 2 strings and it does not care about case sensitive.Return Type:Boolean
+
+18. compareTo() --> to compare the 2 string by using ASCII values.Return Type:int
+
+
+ASCII VALUES :-
+=============
+
+1 --->  A - Z=65 to 90
+
+A	B 	C.....................Z  
+                                                                                                      
+65	66	67...................90                 
+                                                   
+2 --->  a - z = 97 to 122                
+                                           
+
+a	b	c.....................z
+97	98	99	  122
+
+
+3 --->  0 - 9 = 48 to 57
+
+0	1	2.......................9
+48	49	50.....................57
+
+4 ---> Space = 32
+
+
+
+s1=AApple
+s2=Aapple
+
+65-65=0
+65-97=-32
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ASCII VALUE :-
+----------------------				
+
+A -Z --> 65 to 90  	   																		
+a - z--> 97 to 122 	   										 						 		
+space -->32			
+0 to 9 --> 48 to 57   
+
+
+
+
+
+String types :- 
+------------------
+1. Literal String
+2. NonLiteral String
+
+To find the memory space ----> System.identityHashCode()
+--------------------------------
+System --> Class
+identityHashCode() --> Static method
+							
+1. Literal String
+-----------------------
+-Stores inside the string pool-constant --> Memory space(memory space presented inside the heap memory)					
+-String ref="Java";
+-In case of duplicate value,it will allocate same memory location
+
+syntax  -->  String ref="val";	-------------- literal string
+ex: String s1="Java"; 	
+      String s2="Java";		
+
+2. Non Literal String
+---------------------------
+-Stores inside the heap memory
+-String ref=new String("Java");
+-In case of duplicate value, it will allocate different memory location
+
+Syntax  -->  String ref=new String("value");   -------- non literal string			
+ex: String s1=new String("java");
+
+
+
+Immutable String  (not change)-------------------------------Literal String
+--------------------------------
+		
+-to join two string -- concat method
+-cant able to change the value in memory
+						
+						
+Mutable String   (change)-------------------------------------Non literal String
+--------------------------------
+-StringBuffer ref=new StringBuffer("val"); 
+-StringBuilder ref=new StringBuilder("val");
+
+-to join two string -- append method
+-can able to change the value in memory.
+
+
+
+
+
+
+
+
+
+Difference between StringBuffer  &  StringBuilder :-
+-------------------------------------------------
+StringBuffer 			StringBuilder
+=============			================
+Synchronous-sequential		Asynchronous-parallel
+Thread safe			                   not Thread safe
+More time			                 less time
+
+String
+StringBuilder
+String Buffer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+Array :-    
+--------   
+
+ * Array is used for storing multiple values of similar datatypes in  a single reference / single variable
+ * Array is an index based one. 
+ * Index starts with 0 and ends with n-1  , when the length of the array is n.
+ * Array is fixed in size in compile time.
+ 
+
+syntax ---> datatype ref[] =new datatype[size];                
+
+example --->   int num[]=new int [5];
+
+
+	10	20	30	10	50
+pos	 0	 1	 2	 3	 4			
+             num[0]      num[1]      num[2]      num[3]      num[4]
+
+
+
+int num[]={20,40,40,10,50,60,70};
+
+String a[]={"Anu","Abi","Arun","Sam"}
+
+
+
+enhanced for loop - Syntax forech
+-----------------------------------
+			
+for(datatype newRefName : values stored variable){
+
+	sysout(newRefName);
+}
+
+
+
+
+Normal For loop 	                                                          Enhanced for loop            
+----------------------	                                                       ------------------------------		
+
+works based on index			                                   works based on value
+able to apply condition		                                   cant able to apply condition
+able to set the limit of execution		                       unable to set the limit of execution
+print in forward &reverse order		                        print only in forward order
+chance of exception			                                   no chance of exception
+
+
+
+
+
+
+
+
+
+
+
+fibbonoci number
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+for (int i=2 ; i<4; i++){				for(int i : a){
+				
+	sop(a[i])					       sop(i)	 
+                                                                                                          }
+}
+
+
+
+
+Array Disadvantages		
+----------------------------
+*Array accepts only similar datatype.
+*Memory wastage is high in array because memory is allocated at compile time 
+
+
+		
+Collection - ( Predefined Interface )  
+-------------------- --------------------------
+
+* Collection is used for storing multiple values of  dissimilar datatypes in  a single reference.               
+* Memory wastage is low , because memory is allocated at run time
+* Memory is not fixed one.
+
+
+Collection Interfaces :-
+-----------------------------
+1. List ( I )  - 
+2. Set ( I )   
+
+java.lang ------------------>default package of java
+Object----------------------->Super class of Java.
+
+1. List								
+---------
+* List is pre-defined interface which is presented in java.util package
+* List is an index based one		
+* List will allow duplicates					
+* List prints in insertion order  				
+* List accepts n null=================================undefined value 	
+* List represented in [ ]					
+
+Types of Classes presented in List :-	
+-----------------------------------------------	 
+ArrayList - C  
+LinkedList - C			
+Vector - C
+
+List al = new ArrayList();
+
+Object Creation for List :- (Up Casting)
+-----------------------------------
+List l=new ArrayList();		
+List l=new LinkedList();	
+List l=new Vector();
+
+
+Explanation for List li=new ArrayList();
+============================
+--->To call the method we need object
+--->List is an interface,we cannot create an object for interface.
+--->Under List interface,We have 3 classes implementing this List interface.
+--->So create object for the classes we have under List interface and assign that created object to List variable(UPCASTING)  list ( interface) = parent  
+--->It comes under upcasting
+
+
+Generics  <>------To acheive type safety   <Integer>
+------------------------------------
+-jdk 1.5features
+<Integer> -->inside  we have to pass wrapper class  or pre-def class         
+-it accepts only similar datatype
+
+
+classes of primitive datatype-----------wrapper class
+
+int----------Integer
+long--------Long
+char----------Character
+String--------String
+
+
+
+
+
+
+
+ 
+
+To print the list one by one (Iteration) :-
+-------------------------------------
+1. normal for loop
+2. enhanced for loop  
+
+
+Difference between ArrayList and LinkedList:-
+---------------------------------------------------------
+ArrayList(Array)			                                 LinkedList(Linked list)
+============			                             =================
+1.Insertion,deletion performance	                         1.Insertion,deletion is performance wise fast
+wise slow
+
+2.Searching,Retrieving is fast		                        2.Searching,Retrieving is slow
+
+
+Difference between ArrayList and Vector :-                                                   
+-----------------------------------------------------
+ArrayList(C)--faster			    Vector--slower
+==============			            ===========
+1.Asynchronised(parallely		1.Synchronised(sequential access)
+we can access)
+
+2.Not thread safe			    2.Thread safe since it is sequential access			
+
+
+
+
+
+
+
+2. Set   - I
+------------
+* Set is pre-defined interface which is presented in java.util package
+* Value based
+* Dont allow duplicates
+* It prints depend upon the class which it was implemented
+* It accepts 1 null
+* It representes in []
+
+
+Set -I
+----------
+HashSet -C -----------> Prints in Random Order
+LinkedHashSet -C   ----------> Prints in Insertion Order
+TreeSet -C  -----> Prints in Ascending Order
+
+
+Object Creation for Set :-
+--------------------------------
+Set s=new HashSet();
+Set s=new LinkedHashSet();
+Set s=new TreeSet();
+
+
+Supported by set		                    methods not supported by set
+----------------------                         	       ----------------------------------------------
+size()					
+add(v)
+isEmpty()			                               add(i,v)
+contains(v)			                               set(i,v)
+remove(v)				                   indexof()
+addAll(ref)			                               lastIndexof()
+retainAll()				                     get(i)
+removeAll()						
+equals()
+clear()
+			                                normal for loop (not supported)
+enhanced loop
+
+				
+
+
+
+
+
+
+
+
+ Map :-        ( Pre-defined Interface )--------------------------->Wont comes under Collection
+------                                                
+* Key , Value Pair Combination.          <Integer  , String>
+* Key dont allow duplicates.                                          
+* Value allow duplicates.
+* Map represented in {}.      
+
+
+
+Map  -I
+-----------
+1.HashMap -C
+2.LinkedHashMap -C
+3.TreeMap - C
+4.HashTable -C  (Legacy Class)
+
+
+Map<k,v> mp=new HashMap< >();     
+Map<k,v> mp=new LinkedHashMap< >();
+Map<k,v> mp=new TreeMap< >();
+Map<k,v> mp=new HashTable< >();
+
+
+Types
+----------
+HashMap             ------->  Random order        -------->   key 1null ,value =n null
+LinkedHashMap  ------->  Insertion order       ------->    key 1null ,value =n null
+TreeMap              ------->   Ascending order    ------>     key ignore null ,value =n null
+Hashtable             ------->  Random  order      -------->   key ignore null ,value =ignore null
+
+
+Maps Methods :-
+-----------------------
+
+1. put() ---- To insert the values in map
+2. size() ------ To find the size of map
+3. get(key) ----- To get the value from the map
+4. remove(key) ------- To remove the particular value from map by using key
+5. clear() ----- To clear all the value from map
+6. isEmpty() ------ To check map is empty or not 
+7. containsKey() ----- key is present or not
+8. containsValue() ----- value is present or not
+9. values() ------ displaying the values only
+10. entrySet() ----- for iterating the map
+
+
+
+Difference Between HashMap & HashTable :-
+------------------------------------------------------------
+		
+Hashmap :-
+---------------
+Asynchronous - parallel access--
+Not thread safe
+less time
+key 1null ,value =n null
+
+Hash table :-
+-----------------
+synchronous - sequential access
+thread safe
+more time
+key ignore null ,value =ignore null
+
+
+
+Constructor
+-------------										
+It is special method, When object is created the constructor will invoked automatically. 
+
+
+Rules    
+------						
+1.Classname and constructor name should be same.		 	
+2.Constructor should not have a return type.     
+
+	 	
+								
+   
+Types
+----------					
+1.Non-Parametrized Constructor or default constructor  ()
+2.Parametrized Constructor.(int a)
+								
+
+method				 	                                            constructor
+-----------                                                                    	                        -------------
+
+create obj & call the method obj.methodname                               obj creation is enough
+classname & methodname may be same or diff                             classname & const name must be same
+contains return type	void			                                          does not contain return type  void
+ 
+
+
+Constructor Chaining
+--------------------------
+-to reduce the no of object creations
+-The process of calling one constructor from another constructor with respect to current object creation is  called constructor chaining.
+
+Two methods :-
+-----------
+1. this() -- to invoke particular class  
+2. super()-- to invoke parent class
+
+
+this() :-
+-----------
+-it is used to invoke class level constructor
+-1st line of constructor----- we can specify only one this();    
+
+super() :-
+---------
+it is used to invoke parent level constructor
+1st line of constructor
+
+1. this  --> this is represent current class
+2. this() --> this() represent current class Constructor
+3.super ---> super is represent parent class
+4.super() --> super() is represent parent class constructor
+
+
+
+
+
+Variable ----------used to store values /datas       
+	--name of a memory location where data get stored
+Eg: a =10;
+
+	
+			                       												
+TYPES OF VARIABLE 	        
+--------------------------------                          
+1.Local Variable                                          
+2.Instance Variable or Global Variable           
+3.Static Variable
+
+1. Local Variable				 
+---------------------
+It is declared inside the method block and constructor.
+Local Variable activate when control enters the method or block and  deactivate when control exit the method or block.
+Scope of local variable is within the  method block and constructor.
+Cant able to mention access specifier.   
+It does not contain default value.
+We have to initialize before.
+Stores in stack memory.
+
+2. Instance Variable or Global Variable :-
+--------------------------------------------------------
+It is declared outside the method, block and constructor,but inside the class.
+Instance Variable activate when object is created and  deactivate when object is destroyed.
+Scope of instance variable is throughout the class.
+Can able to mention access specifier.
+It  contain default value.
+Initialization is not compulsory.
+Stores in heap memory.
+
+3. Static Variable
+-------------------------
+It is declared outside the method , block and constructor,but inside the class.
+Static Variable activate when class is created and  deactivate when class is destroyed.
+Scope of static variable  is throughout the class.
+Can able to mention access specifier.
+It  contain default value
+Initialization is not compulsory
+Stores is static Memory
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+FILE OPERATION :-
+-------------------------------
+File related operation is called file operation.
+Using file operation , we can create ,read ,write and update in a file
+File is a pre-defined class present in java.io package
+
+methods :-
+---------------
+mkdir()-m
+mkdirs()-m
+createNewFile()-m
+isFile()-m
+isDirectory()-m
+canRead()-m
+canWrite()-m
+canExecute()-m
+exists()-m
+isHidden()-m
+listFiles()-m
+list()-m
+delete()-m
+
+FileUtils -C   predefined
+---------------
+write()  - m  --->  static method
+readlines() -m  --->  static method
+
+download --> commons io - jar--->  2.7 (or) 2.4 (or) 2.8 ( Version )
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+Encapsulation --------- Purpose : Data hiding mechanism
+--------------------
+Wrapping of data and code acting on data together in a single unit is called encapsulation
+
+
+
+POJO Class-Plain Old Java Object
+------------------------------------------
+
+The class which contains only variables ,methods & constructors is called POJO class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SINGLETON CLASS :-
+-----------------------------
+The class which contains only one object is called Singleton class.
+
+Whenever we want to store the result of the method in a variable ,we have to 
+give datatype as the return type.
+
+
+
+
+
+Mohammed Uvaish ------------8883840940
+
+
+select * from user_tables
+
+select * from automation
+select * from autostudent
+
+select cname,sname from automation am,autostudent at
+where
+am.cid = at.cid
+
+select cname,sname from automation am inner join autostudent at
+on
+am.cid = at.cid
+
+select cname,sname from automation am,autostudent at
+where
+am.cid = at.cid(+)
+
+select cname,sname from automation am left join autostudent at
+on
+am.cid = at.cid(+)
+
+select cname,sname from automation am,autostudent at
+where
+am.cid(+) = at.cid
+
+select cname,sname from automation am right join autostudent at
+on
+am.cid(+) = at.cid
+
+
+select cname,sname from automation am full join autostudent at
+on
+am.cid = at.cid
+
+
+select sname,cname from automation am,autostudent at
+
+select * from employees
+select employee_id,first_name,manager_id from employees
+
+select e1.first_name as employee_name,e2.first_name as manager_name from employees e1,employees e2
+where
+e2.employee_id=e1.manager_id
+
+
+
+
+
+
+
+0----------------------------i
+0
+1
+2
+1----------------------------i
+0
+1
+2
+2-----------------------------i
+0
+1
+2
+

@@ -1,0 +1,48 @@
+xpath:
+---------
+id,name,class   ==== not stable
+
+validate the locators in DOM
+
+Types of Xpath:
+============   
+
+ / -absolute path
+(From root element to desired element we need to take path)
+                                                                                                             
+
+500 element------350
+
+/html/body/div/div/  purple clr=tagname  brown clr= attribute name == blue clr==attribute value   blackclr =text
+
+//-relative x path:
+-----------------------
+(Only From  desired element can take path)
+
+
+xpath syntax:
+---------------
+
+<input  type="text" data-testid="royal_email" placedholder="Email address or phone number">
+
+//tagName[@attributename='attributevalue']
+
+
+//input[@type='text']
+
+//input[@placeholder='Email address or phone number']
+
+
+xpath index syntax:
+--------------
+(xpath)[index]
+
+(//tagName[@attributename='attributevalue'])[index]
+Index starts from 1
+
+
+(//input[@class='inputtext _55r1 _6luy'])[2]
+
+(//input[@class='inputtext _55r1 _6luy'])[1]---------------------username
+
+(//input[@class='inputtext _55r1 _6luy'])[2]--------------------password

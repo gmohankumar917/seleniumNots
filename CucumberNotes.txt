@@ -1,0 +1,489 @@
+
+Cucumber Tool: 
+===========
+Cucumber is a tool to achieve BDD(Behaviour Driven Development) framework.
+JUnit , TestNG , POM , DataDriven --> TDD ( Test Driven Development )
+Requirements will be written in plain English Language(Gherkin language)
+Using which even Non-technical members can understand. which functionality is under test and how we carry out that testing.
+
+
+Steps:
+====
+1.Create a Maven Project
+2.Download Cucumber plugin from Eclipse MarketPlace.
+3.Add dependencies
+
+
+Dependencies:
+============
+io.cucumber
+
+Cucumber java 4.8.0 
+Cucumber junit 4.8.0
+
+          ( or )
+api.cucumber
+
+Cucumber java 4.2.0
+Cucumber junit 4.2.0
+Cucumber core 4.2.0
+
+         ( or )
+io.cukes
+Cucumber java 1.2.5
+Cucumber junit 1.2.5
+Cucumber core 1.2.5
+gherkin 2.12.2
+
+
+
+3 major components in your cucumber framework :-
+====================================
+1.Feature files -- steps in plain english language --> ( src/test/resources ) --> folder (Feature files)
+2.Stepdefintion files -- coding file ---> ( src/test/java ---> org.stepdefinition )
+3.TestRunnerClass --> To execute the program --> (src/test/java ---> org.runner)
+
+
+
+Gherkin keywords:
+=============
+
+1.Feature:Feature defines the functionality which is under test --> ( Like test scenario)
+Eg:To validate Login functionality of Facebook application
+
+
+2.Scenario:In that particular functionality,what exact case we are testing --> ( Like a test case )
+
+Eg:
+Scenario:To validate login with invalid username and invalid password
+Scenario:To validate login with empty username and empty password
+
+3.Given ---> Precondition     
+
+4.When --> Action
+
+5.Then --> Post condition  
+
+6.And --> Extra or additional Condition ( for When )
+
+7.But --> Negative condition
+
+
+Cucumber Options:
+-----------------------
+1. features   
+2. glue
+3. monoChrome
+4. dryRun 
+5. strict
+6. snippets
+7. tags
+8. plugin
+
+
+1. features:
+-------------
+Mention the path of feature file
+
+2. glue:
+-----------
+Mention the path of step definition file
+
+3. monoChrome:
+----------------------
+Provides the output as better readable format in console
+
+4. dryRun:
+-------------
+Check if all step have step definition file.
+
+5. strict:
+-----------
+Will fail execution if there are undefined or pending steps
+
+6. snippets:
+--------------
+Cucumber generates code snippets in Underscore style by default. 
+If you want to change the format of cucumber snippets then you can set snippet type in your cucumber options. There are two types of snippets,
+
+1- SnippetType.CAMELCASE
+2- SnippetType.UNDERSCORE
+
+7. tags:
+----------
+For grouping the scenarios.We can use tags.What tag in the feature file should be executed
+
+8. plugin:
+-------------
+Mention the different reporting format like json,xml,html
+
+
+
+
+Background:
+=========
+--->is a gherkin keyword.
+--->Common step or precondition present in all the scenarios can be mentioned under Background keyword
+--->Background is common only for the all scenarios present in the particular feature file.
+
+
+monochrome:
+============
+monoChrome=false(default value)
+In case of 4.2.0 dependencies   there will be unclear output  representation in console
+To make it readable we can change monochrome as true
+
+
+dryRun:
+=======
+dryRun=false(default value)
+It will lead for normal execution of all scenarios and at the end of execution it will generate snippets for undefined steps
+
+dryRun=true
+It will skip the normal execution of all scenarios and  it will only generate snippets for all the undefined steps
+
+
+
+Strict 
+-------
+By default Strict will be set as false
+When strict=false,scenarios will be executed normally.
+At the end, for undefined steps snippets will be generated and the
+build is marked as passed.
+
+When strict=true,scenarios will be executed normally.
+At the end for undefined steps snippets will be generated and the
+build will be marked as failed when it has some undefined steps.
+
+
+
+
+Diff b/w Scenario and Scenario Outline
+=============================
+Scenario ---> Will be executed only once
+
+Scenario Outline ---> Will be always accompanied with Examples tag where we
+can store the bulk of data(Both positive and negative testcase datas we can store).
+Same scenario will get executed multiple times till we have data in Examples tag.
+Number of iterations is based on the number of sets of data we have in Examples tag
+
+Example
+|username| password|---
+|deepakraj@gmail.com|54544122|-- 1 combo
+|greens@gmail.com|222222|--2nd combo
+
+
+
+
+
+
+
+
+
+
+Diff b/w Scenario Outline and Datatable:
+==============================
+Scenario Outline:Using Scenario Outline we can pass the data from Examples tag
+to any step of the Scenario Outline.
+
+Datatable:Using Datatable we can pass the data to a particular step only.Under the
+Step we need to maintain the data.We can consider the data as List,List<List>,
+Map and List<Map>.
+
+
+DataTable :- predefined class
+---------------
+Passing Data under particular step of a Scenario.
+
+Types :-
+----------
+1. Without Header
+2. With Header
+
+
+1. Without Header :-
+------------------------
+* One dimensional List-----List<String>
+* Two dimensional List-----List<List<String>>
+
+2. With Header :-
+------------------------
+* One dimensional Map-----
+* Two dimensional Map----List<Map<String, String>>
+
+
+Methods in DataTable Class :-
+------------------------------------------
+
+1. asList()  ----> we can access 1D List datas
+2. asLists() ----> we can access 2D List datas
+3. asMap() ----> we can access 1D Map datas ----------> return type ---Map<String,String>
+4. asMaps() -----> we can access 2D Map datas
+
+
+One Dimensional List :-
+---------------------------------
+
+eg ----> When User has to enter the email in email field
+               | give data | give data | give data | give data | give data |
+
+
+Two Dimensional List :-
+---------------------------------
+
+eg ----> When User has to enter the email in email field
+                               0                      1                      2
+                0  | give any data | give any data | give any data | 
+                1  | give any data | give any data | give any data | 
+                2  | give any data | give any data | give any data | 
+
+
+One Dimensional Map :-
+----------------------------------
+
+Map<String, String> mp = d.asMap(String.class, String.class);
+mp.get("username");
+
+eg ----> When User has to enter the email in email field
+                    | header | give data |
+                    | header | give data |
+                    | header | give data |
+                    | header | give data |
+
+
+Two Dimensional Map :-
+----------------------------------
+
+eg ----> When User has to enter the email in email field
+List<Map<String, String>> mp = d.asMaps();
+mp.get(2).get("credentials");
+
+                    |  header    |   header   |
+                 0 | give data | give data |
+                 1 | give data | give data |
+                 2 | give data | give data |
+
+
+
+
+
+Diff between Hooks and Background:
+===========================
+Background: 
+-----------------
+feature file level.Will be running before the execution of all the 
+Scenarios in particular feature file.
+
+Hooks:
+---------
+@Before and @After annotations maintained in a separate Class.
+Hooks is maintained in Separate Class under StepDefinition package.
+
+@Before --will be running before the execution of all the Scenarios in all Feature files  --- Browser configuration
+@After --will be running after the execution of all the Scenarios in all Feature files ---> closing the browser
+
+
+
+
+
+
+Tags:
+------
+-Using tags we can group the different scenarios or feature file
+-Only we can group scenario ( or ) Only we can group feature file
+- To run only scenarios that comes under given tagName
+tags = {"@sanity"}
+- To ignore the scenarios that comes to the given tagname
+tags={"~@sanity"} or tags={"not @sanity"}
+
+
+And Operator
+----------
+tags={"@sanity","@regression"} or tags={"@sanity and @regression"}
+
+OR Operator
+---------
+
+tags={"@Sanity, @Regression"} Or tags={"@sanity or @Regression"}
+
+
+https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0
+
+snippets:
+------------
+Cucumber generates code snippets in Underscore style by default. 
+If you want to change the format of cucumber snippets then you can set snippet type in your cucumber options. There are two types of snippets,
+
+1- SnippetType.CAMELCASE
+2- SnippetType.UNDERSCORE
+
+
+
+
+
+Background:
+=========
+--->is a gherkin keyword.
+--->Common step or precondition present in all the scenarios can be mentioned under Background keyword
+--->Background is common only for the scenarios present in the particular feature file.
+
+
+Hooks(@Before and @After ):(Common for all the scenarios present in all the feature files)
+====
+Create separate class for Hooks under stepdefinition package
+@Before-------It will execute before the execution of each scenario
+@After-------It will execute after the execution of each scenario
+....................................................................
+
+
+
+Ordered hooks:
+==========
+
+@Before will always running in incremental order(1,2,3.....)
+@After will always run in decremental order(3,2,1......)
+
+@Before(order=40)
+@Before(order=12)
+@Before(order=33)
+
+@After(order=2)
+@After(order=3)
+@After(order=1)
+
+
+
+
+
+
+
+
+
+
+
+
+Reporting :-
+=========
+plugin option is used to generate reports
+
+ Target --->create 'Reports' folder
+
+plugin={" "," "," "}
+
+pretty = Scenarios runned in the current execution will get displayed in gherkin format
+usage = Scenarios runned in the current execution will get displayed in console in json format
+
+
+HTML report:
+===========
+"html:reportfolderName"
+
+Junit report: (xml report)
+=========
+"junit:reportfolderName\\filename.xml"
+
+Json report:
+=========
+"json:reportfolder\\filename.json"
+
+
+
+
+
+
+
+
+
+
+
+
+JVM Report Generation:
+==================
+1.Add Cucumber-reporting 4.11.2 dependency in pom.xml
+2.Create a new class (JVMReport under utilities package)where u can create method for report generation (generateJvmReport).The input for this method will be json file path
+3.In TestRunner class,inside @AfterClass call the generateJvmReport method for generating JVM report.
+
+
+Method for generateJvmReport (Business Logic):
+==========================
+1.Mention the target folder location - File
+2.Add details to the report using Configuration class
+3.Add json file paths into List<String> (first complete 4th step then come back to 3rd step )
+4.Create object for ReportBuilder class and using the created object call generateReports() method.
+
+
+System.getPoperty("user.dir") ---> it will return the user's current working directory path as String
+
+
+		  D:\KannanTestingPractice\11AMProjectClasstarget\Reports\JvmReports
+File f = new File(System.getProperty("user.dir")+"\target\Reports\JvmReports")
+
+D:\KannanTestingPractice\11AMProjectClass\target\Reports\JvmReports
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Rerunning failed scenarios :-
+------------------------------------
+
+In TestRunner class, in plugin add predefined command called - "rerun:folder\filename.txt"---- by using this text file to save the failed scenarios
+
+Then create a TestReRunner class,in which mention features="@failed scenario text filepath"
+
+Whenever you want to rerun the failed scenarios,run the TestReRunner class,So the failed scenarios that got
+saved in txt file
+
+alone will get runned again.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tagged hooks:
+=========
+Tags+Hooks
+
+Tags-----using tags,u can run only particular group of scenarios
+

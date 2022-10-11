@@ -1,0 +1,24 @@
+Robot class:
+============
+java.awt package
+awt-abstract window toolkit
+
+To achive keyboard KeyBoard operation
+
+Robot ref = new Robot();------throws AWTException
+
+Employee ref = new Employee
+
+Methods:
+=======
+keypress();
+keyrelease();
+
+
+
+syntax
+=======
+r.keyPress(KeyEvent.VK_CONTROL);
+
+
+r.keyRelease(KeyEvent.VK_CONTROL);

@@ -1,0 +1,37 @@
+Actions:- class---To Perform the mouse Operation
+===============
+moveToElement()
+dragAndDrop() 
+KeyUp()
+KeyDown()
+doubleClick()
+contexClick()
+
+obj creation for action class
+=============================
+Actions obj=new Actions(WebDriver ref);
+obj.methodName();
+
+To do mousehour action:
+=======================
+moveToElement()-m
+
+syntax:
+======= 
+Actions obj=new Actions(webDriver ref);
+
+obj.moveToElement(webelEment ref).perfom();--m
+
+obj.dragAndDrop(webelElement src,webelElement target).perfom();--m
+
+obj.keyDown(Keys.SHIFT).sendKeys(web ref,"selenium").keyUp(Keys.SHIFT).perform();
+
+
+1.To Mouse Hover
+Link(http://greenstech.in/selenium-course-content.html)
+
+
+2.Drag And Drop
+link(https://demo.guru99.com/test/drag_drop.html)
+
+

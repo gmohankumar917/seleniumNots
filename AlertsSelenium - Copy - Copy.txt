@@ -1,0 +1,37 @@
+Alert:Interface
+==========
+Alert is  a small message box displayed on the screen to give some information to the user.
+Alert  and webpage are different.
+Alert has no locators.
+When any alert appeared,first we need to switch into the alert to handle the alert then only
+user can perform the next operation in webpage. (Alert)  ok   cancel  -  
+
+To switch into the alert:
+=================
+Alert a=driver.switchTo().alert();
+
+Types: 3 types
+--------
+Simple alert-->contains only OK button....(We should accept this alert)
+Confirm alert--->Contains both OK and Cancel button(Either we can accept
+or dismiss this alert)
+Prompt alert---->Contains text box with OK and Cancel button, 
+We can enter text "yes" to accept 
+the alert or we have to give "No" to dismiss the alert.
+
+Methods in Alert:
+==============
+accept()--m ----to accept the alert
+dismiss()--m----to dismiss the alert
+sendKeys()--m----to insert the values
+getText()---m--To print the text from the Alert.
+
+
+
+NoAlertPresentException-----------------If there is no Alert currently present in your webpage but if u try to switch into an Alert,you will get NoAlertPresentException
+UnHandledAlertException---------------Without handling the alert,if u try to perform any operation in webpage ,You will get UnHandledAlertException
+
+
+
+http://demo.automationtesting.in/Alerts.html
+

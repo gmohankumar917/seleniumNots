@@ -1,0 +1,37 @@
+
+
+
+Text and Contains Text:
+==================
+
+Text              
+------                                    tag name = purple clr  attribute name = brown clr   attribute value = blue clr     text == black                                    
+
+//tagname[text()='text']
+
+
+Contains Text:
+--------------------
+//tagname[contains(text(),'partial text')]
+
+
+WebElement(Interface)
+==========
+
+getText()
+getAttribute()
+
+WebElement.getText()---method used to get the already existing text in webpage
+Return type: String
+
+WebElement.getAttribute("attributename")---method used to get the given attribute's corresponding attribute value.
+Return type: String
+
+
+value--user inputs are automatically stored in "value" Attribute.
+so if you want to get the text that you have entered into a textfield----use getAttribute("value")
+
+
+
+https://demoqa.com/automation-practice-form
+

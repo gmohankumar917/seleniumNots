@@ -1,0 +1,118 @@
+
+USername,Password,Click Login Button
+
+Testing:
+----------
+Manual testing
+Automation testing
+
+Invalid username,Invalid password--------Expected:LOgin failed--------Actual:LOgin failed---------Testcase passed
+
+valid username,Invalid password-------Expected:LOgin failed--------Actual:LOgin successful-------Failed----------Report this defect to my developer----Developer rectify
+------Given again for re-testing
+
+Invalid username,valid password-------Expected:LOgin failed
+
+valid username,valid password-------Expected:LOgin Successful------user should be on home page of given account
+
+Blank username,Blank password-----error message to enter username and passoword
+
+
+
+Drawback:
+=========
+1.Time consumption
+2.Human effort
+
+
+
+Selenium:
+------------
+Selenium is a test automation tool used to automate web based applications.
+Opensource,freeware
+
+
+
+Drawback:
+-------------
+We cannot automate desktop applications using selenium tool.
+We cannot automate Captcha.
+
+Selenium components:  
+----------------------------
+Selenium IDE==integrated development environment ( code - selenium IDE -browser) - it will support only firefox
+Selenium RC = remote control--- (code===selenium rc===server==browser==all browser platform  - it takes to much of time
+Selenium webdriver== all browser( code== selenium webdriver==browser  ) -
+Selenium Grid= hub ==nodes   code - server - server - server - browser
+
+
+
+
+Steps:
+-------
+Download the jar file(selenium) :--- Go to chrome type selnium download-->java->download jars
+Configure the jar file
+Download the driver exe file(chrome,firefox,ie)    
+
+Steps:
+-----------                                       
+Step 1: Create a java project    
+
+Step 2:Create a new Folder[right click project-->new--->folder--->lib]
+
+2.1.copy and paste the selenium jar in lib folder from downloads
+
+2.2.right click jar--->build path---->add to build path
+
+Step 3: Create a new Folder[right click  project-->new--->folder--->drivers]
+
+3.1.Extract the downloaded driver zip folder
+
+3.2.copy and paste the exe file in driver folder from downloads
+
+step 4:create a class----write code
+
+Driver:   
+====
+chromedriver
+geckodriver
+edgedriver
+To launch the browser
+================ 
+system.setpropertry("key","value");
+Key:(Everythg must be in small letter)-----------IllegalStateException
+------
+chrome-----(webdriver.chrome.driver) - k
+firefox-------webdriver.gecko.driver
+ie-------------webdriver.ie.driver
+safari---------webdriver.safari.driver
+opera---------webdriver.opera.driver
+
+Value------Path(mention the location where u have ur driver file)
+object creation
+=========
+WebDriver objectrefname= new ChromeDriver();
+Class
+--------
+chrome------ChromeDriver
+gecko-------FirefoxDriver
+ie-------------InternetExplorerDriver
+
+
+
+WebDriver Methods:
+= == = = = = = = = = 
+driver.get()---to pass the url of the webpage
+driver.manage().window().maximize()--->to maximize my browser
+driver.getTitle()----->to get the current title of the webpage
+driver.getCurrentUrl()---->to get the current url of the webpage
+driver.quit()---------->it will close all opening window
+driver.close()------->it will close current opening window
+
+
+Exceptions:
+========= 
+IllegalStateException----when ur doing mistakes in key and value
+TimeOutException--------ur network will poor 
+SessionNotFoundException---when ur driver version and ur chrome version is mismatch
+

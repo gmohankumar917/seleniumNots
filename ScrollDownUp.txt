@@ -1,0 +1,48 @@
+JavaScriptExecutor:I
+------------------------
+JavaScriptExecutor js=(JavaScriptExecutor)driver;
+js.executeScript("javascript code",WebElementRef);
+
+
+Scroll down/up:
+--------------------
+arguments[0].scrollIntoView('true')- Scroll down
+arguments[0].scrollIntoView('false')-Scroll up
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Highlighting a WebElement using JavaScriptExecutor
+==============================================
+arguments[0].setAttribute('style','background:yellow')
+
+
+
+value attribute-----to store user entered text
+style attribute------to store css properties(color,font-family,background color,font-size,font-width)
+
+
+style="background:yellow;font-family:Arial"

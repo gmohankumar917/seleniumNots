@@ -1,0 +1,65 @@
+Drop Down syntax:
+---------------------
+
+<select>
+<option value="IND">India</option>
+<option value="US">United States</option>
+</select>
+
+Select:C
+--------
+
+Find Element for dropdown
+
+Select objname=new Select(WebElement);
+
+
+selectByIndex(2)
+selectByValue("IND")
+selectByVisibleText("India")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Location:
+
+Coimbatore  0
+Tuticorin   1
+Chennai   2
+Madurai   3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

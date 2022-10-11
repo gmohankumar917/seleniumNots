@@ -1,0 +1,15 @@
+WebDriver Methods:
+------------------
+close()
+findElement()
+findElements()
+get()
+getTitle()
+getCurrentUrl()
+getPageSource()
+getWindowHandle()
+getWindowHandles()
+manage()
+navigate()
+quit()
+switchTo()

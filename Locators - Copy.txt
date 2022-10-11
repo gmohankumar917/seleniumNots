@@ -1,0 +1,51 @@
+8 Locators:
+-------------
+id()-------------fastest locator
+name()
+className()
+xpath()             
+tagName()
+linkText()
+partiallyLinkText()
+cssSelector()
+                            
+Note:
+=====
+All these locators available as methods inside Abstract class named "By"
+
+WebDriver:Interface
+-------------------------
+findElement()--->To find the webelement
+
+WebElement:Interface
+-------------------------------                                                      ( tagname== purple clr    attribute name== brown clr   attribute value == blue clr   text==black clr)
+sendKeys()---used to pass the values to the textbox
+click()--used to click a button
+
+
+To Inspect the webpage:
+=====================
+(To view the HTML code for all WebElements in Webpage----DOM(Document Object Model) structure)
+Inspect the webpage-------1.right click ----Inspect---------------2.Ctrl+Shift+i------
+-----------3.func+F12
+
+=========================================
+WebDriver - Interface
+
+findElement - Method to find the WebElement
+
+=========================================
+By----Abstract class
+
+WebElement --- Interface
+
+sendKeys()- method ---------To send/ Pass the values to text boxes-----------It will always accept String alone
+
+click() --method---To click a webelement
+
+
+tagname----should be represent as purple color
+
+Attribute name---should be represent as brown color
+
+attribute value ---should be represent as blue color within the double quotes

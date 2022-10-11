@@ -1,0 +1,390 @@
+Webtable:
+-------------
+<table> Tagname
+                                   driver.fin
+<tr>----------------------driver.(findElements(by.tagname("tr"))--- multiple rows--
+ <th>id</th>
+ <th>name</th>
+ <th>email</th>
+</tr>
+
+<tr>
+ <td>101</td>/
+ <td>Nolan</td>
+ <td>abc@gmail.com</td>
+</tr>
+
+</table>
+
+
+tr-table row
+td-table data
+th-table heading 
+
+
+
+
+
+https://www.w3schools.com/html/html_tables.asp
+
+		// When table values position changes dynamically,find the row number and cell
+		// number of "Germany"
+		List<WebElement> rows = table.findElements(By.tagName("tr"));
+
+		for (int i = 0; i < rows.size(); i++) {
+
+			WebElement row = rows.get(i);
+
+			List<WebElement> datas = row.findElements(By.tagName("td"));
+			for (int j = 0; j < datas.size(); j++) {
+
+				WebElement data = datas.get(j);
+				String text = data.getText();
+
+				if (text.equals("Germany")) {
+
+					System.out.println(text);
+					System.out.println("Row number: " + (i + 1));
+					System.out.println("Column number: " + (j + 1));
+
+				}
+
+			}
+
+		}
+
+
+
+
+
+
+
+a
+b
+c
+d
+e
+
+
+5 rows
+
+
+li.size()=5(0 1 2 3 4)
+
+li.size()/2=2.5=2
+
+
+a
+b
+c
+d
+
+
+li.size()=4(0 1 2 3)
+
+li.size()/2=2
+
+
+
+
+%--------------remainder
+
+10/2=5
+10%2=0
+
+
+dividend=10
+divisor=2
+rem=0
+quotient=5
+
+
+
+a0
+b1
+c2
+d3
+
+
+4/2=2.5=2
+
+WebElement  middleRow;
+
+int size=li.size();
+
+if(size%2==0){
+
+//even number of rows
+
+middleRow=li.get((li.size()/2)-1);
+
+
+}
+else{
+
+//odd number of rows
+middleRow=li.get(li.size()/2);
+
+
+}
+
+
+List<WebElement> datas=middleRow.findElements(By.tagName("td"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+for (int i = 2; i < 4; i++) {
+
+			WebElement row = rows.get(i);
+
+			// headings
+			List<WebElement> headings = row.findElements(By.tagName("th"));
+			for (int j = 0; j < headings.size(); j++) {
+
+				WebElement heading = headings.get(j);
+				String textHeading = heading.getText();
+				System.out.println(textHeading);
+
+			}
+
+			List<WebElement> datas = row.findElements(By.tagName("td"));
+			for (int j = 0; j < datas.size(); j++) {
+
+				WebElement data = datas.get(j);
+				String textData = data.getText();
+				System.out.println(textData);
+
+			}
+
+		}
+
+
+
+Common attribute:
+=============
+Images
+//img
+
+Button
+//button or <input type="button">
+
+Link
+//a with href="link"
+
+Paragraph or text
+//p or span or a-------text
+
+radio button
+//input[@type='radio']
+
+Checkbox
+//input[@type='checkbox']
+
+Textbox
+//input[@type='text box']
+
+Frame
+//iframe or frameset
+
+Table
+//table
+
+
+
+
+
+WebTable(Without tr td tags-----------WebTable with common attributes)
+=================================================
+<div class=row>
+<div class=cell>Name</div>
+<div class=cell>Email id</div>
+<div class=cell>Mob</div>
+</div>
+
+<div class=row>
+<div class=cell>Sara</div>
+<div class=cell>Sara@gmail.com</div>
+<div class=cell>9876543210</div>
+</div>
+
+<div class=row>
+<div class=cell>Amy</div>
+<div class=cell>Amy@yahoo.com</div>
+<div class=cell>9846342123</div>
+</div>
+
+List<WebElement> rows=driver.findElements(By.xpath("//div[@class='row']"));
+for(WebElement row: rows){
+List<WebElement> cells=row.findElements(By.xpath("//div[@class='cell']"));
+for(WebElement cell : cells){
+String data=cell.getText();
+System.out.println(data);
+}
+}
+
+Output:
+======
+Name
+Emailid
+Mob
+Sara
+Sara@gmail.com
+9876543210
+Amy
+Amy@gmail.com
+9846342123
+
+
+
+
+
+
+
+
+
+
+
+To get odd number of rows---------------index will be even numbers:
+============================================================
+a 	rowNumber=1	index:0
+b 	rowNumber= 2	index:1
+c 	rowNumber= 3	index:2
+d  	rowNumber=4	index:3
+e  	rowNumber=5	index:4
+
+1st,3rd,5th
+
+
+
+		WebElement table = driver.findElement(By.xpath("//table[@id='customers']"));
+
+		List<WebElement> rows = table.findElements(By.tagName("tr"));
+
+		for (int i = 0; i < rows.size(); i+=2) {
+
+			WebElement row = rows.get(i);
+
+			List<WebElement> datas = row.findElements(By.tagName("td"));
+			for (int j = 0; j < datas.size(); j++) {
+
+				WebElement data = datas.get(j);
+				System.out.println(data.getText());
+			}
+
+		}
+
+To get even number of rows---------------index will be odd numbers:
+============================================================
+a 	rowNumber=1	index:0
+b 	rowNumber= 2	index:1
+c 	rowNumber= 3	index:2
+d  	rowNumber=4	index:3
+e  	rowNumber=5	index:4
+
+2nd,4th
+
+
+
+		WebElement table = driver.findElement(By.xpath("//table[@id='customers']"));
+
+		List<WebElement> rows = table.findElements(By.tagName("tr"));
+
+		for (int i = 1; i < rows.size(); i+=2) {
+
+			WebElement row = rows.get(i);
+
+			List<WebElement> datas = row.findElements(By.tagName("td"));
+			for (int j = 0; j < datas.size(); j++) {
+
+				WebElement data = datas.get(j);
+				System.out.println(data.getText());
+			}
+
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://www.w3schools.com/html/html_tables.asp
+
+
+
+
+
+
+i+=2	i=i+2
+i+=5	i=i+5
+i+=6	i=i+6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

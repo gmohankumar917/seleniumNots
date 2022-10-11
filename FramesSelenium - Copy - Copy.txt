@@ -1,0 +1,223 @@
+Frames:(designed with <iframe> tag or <frameset>  or <frame> tag in the DOM(Document Object Model))
+--------
+html embedded inside another html
+
+<html>               test case 1     to check whether    
+
+.......
+   <iframe>
+        <html>
+	//img[@src='Jmeter720.png']
+        </html>
+   </iframe>
+</html>
+
+when any locator is placed inside a frame,we cannot directly access the locator,
+first we need to switch into the frame,then only we can access the locator
+
+To check frame is available in the given webpage or not:
+=======================================
+
+//iframe  or //frameset or //frame
+
+To switch into frame:
+===============
+
+driver.switchTo().frame(String id);
+driver.switchTo().frame(String name);
+driver.switchTo().frame(WebElement refname);
+driver.switchTo().frame(int index);
+
+DOM syntax:
+-----------
+<iframe id="876" name="h876g"/>test</iframe>
+
+To switch into a frame:
+----------------------------
+driver.switchTo().frame(String id); 
+	driver.switchTo().frame("876");
+
+driver.switchTo().frame(String name);
+	driver.switchTo().frame("h876g");
+		
+driver.switchTo().frame(WebElement element);
+	WebElement a=driver.findElement(By.xpath("//iframe[text()='test']"));
+	driver.switchTo().frame(a);
+
+driver.switchTo().frame(int index);
+	driver.switchTo().frame(0);
+
+
+if you want switch from any inner frame to its outer frame(parent frame)
+--------------------------------------------------------------------------------------
+
+-->driver.switchTo().parentFrame();  123456  = 
+
+  
+if you want to switch from any frame to main html
+------------------------------------------------------------
+
+-->driver.switchTo().defaultContent();
+
+
+findElement:
+=========
+Return type: WebElement
+
+id="input"(email,pass)
+WebElement e=driver.findElement(By.id("input"));
+
+NoSuchElementException
+
+
+
+findElements:
+==========
+Return type: List<WebElement>
+
+For the given locator value,if there are no matching WebElements-------------It will return Empty List
+
+li.size()==0--------------------------Thr are no matching WebElements
+
+From the empty list ,if u try to access any index--------------u ll get IndexOutOfBoundsException
+
+List<WebElement> e=driver.findElements(By.id("input"));
+
+List<WebElement> e=driver.findElements(By.xpath("//iframe"));
+
+
+List<WebElement> e=driver.findElements(By.tagName("iframe"));
+e.size();-------------returns the no of frames in a Webpage
+
+
+common tagname
+============================
+Textbox-------------input
+checkbox
+button---------------------button
+radiobutton
+images----------------------------img
+links----------------------a
+table
+frames------------iframe or framset or frame
+dropdown
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Common tags:
+=========
+<p>-----paragraph
+<input>---Textfield
+<img>----Image
+<a>------Link
+<button>---button
+<iframe> or <frameset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+http://demo.guru99.com/test/guru99home/
+
+

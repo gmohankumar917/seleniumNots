@@ -1,0 +1,77 @@
+
+TakesScreenshot--Interface
+--------------------------------
+getScreenshotAs----method
+
+Steps:
+-------- 
+
+downcasting syntax
+--------------------------
+newdatatype newvariablename=(newdatatype) oldvariablename;
+
+TakesScreenshot   ts=(TakesScreenshot)driver;
+
+1.downcast(To create object for TakesScreenshot Interface)
+
+2.Use getScreenShotAs() method to take screenshot,it will be stored  in file(temp folder)
+
+3.create a new file(destination) where you want to store your screenshot
+
+FileUtils
+
+4.copy file content from default file to destination file(FileUtils.copyFile() is used)
+FileUtils not present in java or selenium package.so to use it download commons.io.2.4 jar
+
+Download commons-io 2.4 jar:
+--------------------------------------
+FileUtils---class
+copyFile---method ( static method)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Visiblity check commands:
+----------------------------------
+
+isDisplayed()---------to check webElement 
+present in webpage or not
+(can be used for all the webelements)
+
+isSelected()-----------to check webElement selected
+ or not(used for radiobuttons and checkboxes)
+
+isEnabled()-------------to check Enabled or not
+
+
+Notes:
+-------
+All the above methods return
+ boolean value-----either true or false
